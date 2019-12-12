@@ -1,9 +1,12 @@
-spring.datasource.url=jdbc:postgresql://localhost:5432/labs
-spring.datasource.username=bdvelandiap@server1jvs
-spring.datasource.password=Root123456789
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://server1jvs.postgres.database.azure.com:5432
+    username: bdvelandiap@server1jvs
+    password: Root123456789
 
-spring.jpa.hibernate.ddl-auto=validate
-
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
-spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
-spring.jpa.properties.hibernate.jdbc.time_zone=America/Bogota
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+server:
+  port: 8080
